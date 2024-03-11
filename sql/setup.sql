@@ -7,6 +7,6 @@ CREATE TABLE IF NOT EXISTS Clientes (
     nombre VARCHAR(255) NOT NULL,
     apellido VARCHAR(255) NOT NULL,
     email VARCHAR(255) NOT NULL,
-    cuit INT,
+    cuit BIGINT,
     PRIMARY KEY (id)
 ) ENGINE=INNODB;
