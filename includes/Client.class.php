@@ -2,8 +2,7 @@
     require_once('Database.class.php');
 
     class Cliente{
-
-        /* CREAR CLIENTE*/ */
+        /* CREAR CLIENTE */
         public static function crear_cliente ($nombre, $apellido, $email, $cuit){
             $db = new Database();
             $conn = $db->getConnection();
@@ -19,7 +18,6 @@
                 header('HTTP/1.1 404 Cliente No Creado');
             }
         }
-
         /* BORRAR CLIENTE */
         public static function borrar_cliente ($id){
             $db = new Database();
@@ -33,7 +31,6 @@
                 header('HTTP/1.1 404 Cliente No Borrado');
             }
         }
-
         /* OBTENER CLIENTES */
         public static function obtener_clientes (){
             $db = new Database();
@@ -47,8 +44,7 @@
                 header('HTTP/1.1 404 No se pudieron obtener los clientes');
             }
         }
-
-        /* ACTUALIZAR CLIENTES */
+        /* ACTUALIZAR CLIENTE */
         public static function update_cliente ($id, $nombre, $apellido, $email, $cuit){
             $db = new Database();
             $conn = $db->getConnection();

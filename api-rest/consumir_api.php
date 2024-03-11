@@ -22,6 +22,7 @@
         }
 
         $clientes_data = json_decode($result);
+
         foreach ($clientes_data as $message)
         {
             echo $message->nombre;
