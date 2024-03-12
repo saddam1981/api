@@ -37,7 +37,7 @@
             $conn = $db->getConnection();
             $query = $conn->prepare("SELECT * FROM clientes");
             if($query->execute()){
-                $result = $query->fetchAll();
+                $result = $query->fetchAll(PDO::FETCH_CLASS);
                 echo json_encode($result);
                 header('HTTP/1.1 201 OK');
             }else{
